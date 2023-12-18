@@ -1,0 +1,442 @@
+﻿#Top {
+    text-align: center;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 20px;
+}
+
+#Name {
+    text-align: left;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 23px;
+    padding-left: 450px;
+    padding-top: 0px;
+    padding-bottom: 15px;
+    position: relative; 
+    right: 90px; 
+}
+
+#Question { 
+    font-size: 50px;
+}
+
+body {
+    background-color: lightgray;
+}
+
+.content {
+    height: 6000px;
+    background-color: lightgray;
+    overflow: auto;
+}
+
+.line-container {
+    width: 100%;
+    height: 3px;
+    background-color: black;
+}
+
+.counter {
+    font-family: 'Noto Sans', sans-serif;
+    text-align: center;
+    font-size: 150px;
+    padding-top: 100px;
+}
+
+#counter {
+    color: darkslategray;
+}
+
+#counter_description {
+    font-fmaily: 'Noto Sans', sans-serif;
+    text-align: center;
+    font-size: 35px;
+    line-height: 25px;
+}
+
+.intro {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    text-align: center;
+    padding-left: 300px;
+    padding-right: 200px;
+    padding-top: 100px;
+}
+
+#intro1 {
+    padding-right: 150px;
+    padding-bottom: 20px;
+}
+
+#intro2 {
+    padding-right: 150px;
+    padding-bottom: 20px;
+}
+
+#intro3 {
+    padding-right: 150px;
+    padding-bottom: 20px;
+}
+
+#intro4 {
+    padding-right: 150px;
+    padding-bottom: 20px;
+}
+
+.storypoint1 {
+    text-align: center;
+    padding-top: 120px;
+    font-size: 40px;
+}
+
+#point1 {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+}
+
+    #point1::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background-color: rgba(173, 216, 230, 0.95);
+        z-index: -1;
+    }
+
+.highlighted #point1::before {
+    animation: highlight 1.5s forwards;
+}
+
+@keyframes highlight {
+    to {
+        width: 100%;
+    }
+}
+
+#point2 {
+    text-align: left;
+    padding-left: 110px;
+    padding-right: 1250px;
+    padding-top: 50px;
+    font-size: 30px;
+}
+
+#point2_1 {
+    text-align: left;
+    padding-left: 110px;
+    padding-right: 1250px;
+    padding-top: 0px;
+    font-size: 30px;
+}
+
+#point2_2 {
+    text-align: left;
+    padding-left: 110px;
+    padding-right: 1250px;
+    padding-top: 50px;
+    font-size: 35px;
+}
+
+
+.image {
+    position: relative;
+    top: -400px;
+    height: auto;
+    width: 250px;
+}
+
+#point3 {
+    position: relative;
+    top: -800px;
+    left: 600px;
+}
+
+#point3_5 {
+    position: relative;
+    top: -850px;
+    left: 600px;
+    font-size: 25px;
+}
+
+#point4 {
+    position: relative;
+    top: -840px;
+    left: 600px;
+}
+
+#point4_5 {
+    position: relative;
+    top: -890px;
+    left: 600px;
+    font-size: 25px;
+}
+
+#point5 {
+    position: relative;
+    top: -880px;
+    left: 600px;
+}
+
+#point5_1 {
+    position: relative;
+    top: -930px;
+    left: 600px;
+    font-size: 25px;
+}
+
+.POINTS {
+    position: relative;
+    padding-top: 30px;
+    top: 93px;
+}
+
+.ASSISTS {
+    position: relative;
+    padding-top: 30px;
+    top: 93px;
+}
+
+.BLOCKS {
+    position: relative;
+    padding-top: 30px;
+    top: 93px;
+}
+
+.storypoint2 {
+    text-align: center;
+    padding-top: 120px;
+    position: relative;
+    font-size: 60px;
+    top: -700px;
+}
+
+#d3_storypoint2 {
+    width: 600px;
+    height: 400px;
+}
+
+#images_storypoint2 img {
+    display: block;
+    top: 200px;
+    height: auto;
+    width: 500px;
+    margin-bottom: 5px;
+}
+
+#images_storypoint2 {
+    position: relative;
+}
+
+    #images_storypoint2 img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+#d3-container {
+    position: relative;
+    right: 470px;
+    top: 1px;
+}
+
+#x_label {
+    font-size: 20px;
+    position: relative;
+    top: 780px;
+}
+
+#y_label {
+    font-size: 25px;
+    position: relative;
+    top: 420px;
+    right: 355px;
+    transform: rotate(-90deg);
+}
+
+#title {
+    font-size: 35px;
+    position: relative;
+    top: 30px;
+}
+
+#points_analysis {
+    font-size: 25px;
+    position: relative;
+    left: 550px;
+    bottom: 2270px;
+    padding-left: 500px;
+    width: 700px;
+    word-wrap: break-word;
+    line-height: 55px;
+}
+
+#point6_1 {
+    font-size: 30px;
+}
+
+#d3-container-2 {
+    position: relative;
+    right: 520px;
+    top: 50px;
+}
+
+#d3-container-3 {
+    position: relative;
+    bottom: 770px;
+    left: 490px;
+}
+
+#x_label_2 {
+    font-size: 20px;
+    position: relative;
+    top: 780px;
+}
+
+#y_label_2 {
+    font-size: 25px;
+    position: relative;
+    top: 410px;
+    right: 345px;
+    transform: rotate(-90deg);
+}
+
+#title_2 {
+    font-size: 35px;
+    position: relative;
+    left: 30px;
+    top: 45px;
+}
+
+#x_label_3 {
+    font-size: 20px;
+    position: relative;
+    top: 780px;
+}
+
+#y_label_3 {
+    font-size: 25px;
+    position: relative;
+    top: 410px;
+    right: 350px;
+    transform: rotate(-90deg);
+}
+
+#title_3 {
+    font-size: 35px;
+    position: relative;
+    top: 45px;
+    left: 30px;
+}
+
+#MNandFG_Analysis {
+    height: 3000px;
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    bottom: 1200px;
+    line-height: 40px;
+}
+
+#MNandFG_Analysis2 {
+    padding-left: 200px;
+    padding-right: 300px;
+}
+
+#MNandFG_Analysis3 {
+    padding-left: 200px;
+    padding-right: 300px;
+}
+
+#MNandFG_Analysis4 {
+    padding-left: 200px;
+    padding-right: 300px;
+}
+
+mark {
+    background-color: lightslategray;
+    color: black;
+}
+
+#Blocks {
+    position: relative;
+    top: 200px;
+    height: auto;
+    width: 300px;
+}
+
+#BlocksAnalysis {
+    width: 700px;
+    word-wrap: break-word;
+    position: relative;
+    text-align: center;
+    bottom: 450px;
+    left: 1000px;
+}
+
+#AssistsAnalysis2 {
+    width: 700px;
+    word-wrap: break-word;
+    line-height: 50px;
+    position: relative;
+    bottom: 870px;
+    left: 30px;
+}
+
+#Assists {
+    position: relative;
+    bottom: 320px;
+    left: 450px;
+}
+
+#titlestorypoint3 {
+    text-align: center;
+    font-size: 70px;
+    position: relative;
+    bottom: 2530px;
+}
+
+#title2storypoint3 {
+    text-align: center;
+    font-size: 45px;
+    position: relative;
+    bottom: 2550px;
+}
+
+#FinalAnalysis {
+    font-size: 25px;
+    width: 700px;
+    word-wrap: break-word;
+    position: relative;
+    bottom: 2450px;
+    line-height: 50px;
+    left: 45px;
+}
+
+#d3-container4 {
+    position: relative;
+    left: 1100px;
+    bottom: 3050px;
+}
+
+#ConclusionTitle {
+    text-align: center;
+    font-size: 70px;
+    position: relative;
+    bottom: 2830px;
+}
+
+#ConclusionAnalysis {
+    font-size: 25px;
+    width: 1200px;
+    word-wrap: break-word;
+    position: relative;
+    bottom: 2750px;
+    line-height: 50px;
+    left: 300px;
+    text-align: center;
+}
+
+#conclusionwriting {
+    padding-bottom: 50px;
+}

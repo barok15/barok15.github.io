@@ -1,0 +1,256 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bentham&family=Cabin:ital@1&family=Catamaran:wght@600&family=Jost&family=Montserrat&display=swap" rel="stylesheet">
+
+    <title>Data Science Final</title>
+
+</head>
+
+
+<body>
+    <div class="content">
+        <div id="Top">
+            <h1 id="Question">Who was the true MVP of the 2017-18 NBA season?</h1>
+            <h2 id="Name">Barok Tsegaye | December 2023</h2>
+        </div>
+
+        <div class="line-container">
+            <div class="line"></div>
+        </div>
+
+        <div class="counter" id="counter">0</div>
+        <p id="counter_description"><b>is around the amount of players in the NBA at any given time</b></p>
+        <p id="counter_description"><b>but <u>who</u> stands above them all?</b></p>
+
+        <div class="intro">
+            <p id="intro1">
+                I strongly believe that the 2017-2018 was the best NBA
+                season to date. The feelings of tension and excitement watching the Warriors vs. the Cavs in the finals was indescribable.
+                But for those of you who aren’t as familiar with basketball, let me give you some info on how finals work.
+            </p>
+            <p id="intro2">
+                In short, once it gets down to the two final teams there are 7 games played and the first team to 4 wins out of those 7 games
+                takes the title/championship.
+            </p>
+            <p id="intro3">
+                In game 4, the Warriors took it home ending the series with the outstanding score of 4-0 with a
+                scoreboard of 108-85 in their fourth and final game securing their third championship in 4 years. James Harden, a profound
+                player from the Houston Rockets was dubbed MVP or “Most Valuable Player” for his outstanding performance throughout
+                the whole year. Noteably belonging to neither of the teams in the finals.
+            </p>
+            <p id="intro4">
+                But this had me wondering, was Harden truly the unequivocal star, or does the data unveil a different narrative? I decided
+                to tackle this question by calculating through point averages, assist averages, and block averages to see who was really the
+                true MVP of the 2017-18 NBA season. Is the true MVP James Harden, or is it someone else? Cause something tells me, it won't be James Harden.
+            </p>
+        </div>
+
+        <div class="storypoint1">
+            <h1 id="point1">So how are we tackling this?</h1>
+
+            <h5 id="point2">
+                We're going to consider three main catagories. For each of which we'll mark the top 5 highest performing players and compare their performance with James Harden.
+            </h5>
+
+            <h5 id="point2_1">
+                Based on this, if there's a specifc player who seems to outdo Harden in most/all of the catagories, then it could be possible to consider him as the "MVP" instead. We'll be analyzing two stat points related to offense and one related to defense to come to our final conclusion.
+                You can view the specific catagories/statistics we'll be considering on the right.
+            </h5>
+
+
+
+            <div class="POINTS">
+                <h2 id="point3">
+                    POINT AVERAGES
+                </h2>
+                <p id="point3_5">the average amount of points a player scored per game</p>
+
+            </div>
+
+
+            <div class="ASSISTS">
+                <h2 id="point4">
+                    ASSIST AVERAGES
+                </h2>
+                <p id="point4_5">the average ammount of assists a player had per game</p>
+            </div>
+
+
+            <div class="BLOCKS">
+                <h2 id="point5">
+                    BLOCK AVERAGES
+                </h2>
+                <p id="point5_1">
+                    the average amount of blocks a player had per game
+                </p>
+            </div>
+
+        </div>
+
+
+
+        <div class="storypoint2"
+        <h1 id="point6"><b>Lets look at some point averages to start off</b></h1>
+        <h2 id="point6_1"><b> [Hover your cursor over the bars to get an exact value] </b></h2>
+
+        <div id="d3-container">
+        <p id="x_label">
+        Points Scored Per Game (PTS)
+        </p>
+
+        <p id="y_label">
+        Player Names
+        </p>
+
+        <p id="title">
+        Top 5 Point Averages
+        </p>
+
+        </div>
+
+        <div id="d3-container-2">
+        <p id="x_label_2">
+        Minutes Played
+        </p>
+
+        <p id="y_label_2">
+        Player Names
+        </p>
+
+        <p id=title_2>
+        Minutes Played Per Player
+        </p>
+        </div>
+
+        <div id="d3-container-3">
+        <p id="x_label_3">
+        Field Goals Scored
+        </p>
+
+        <p id="y_label_3">
+        Player Names
+        </p>
+
+        <p id="title_3">
+        Field Goals Scored Per Player
+        </p>
+        </div>
+
+        <p id="points_analysis">
+        This Graph on the right represents the top 5 players with the highest points per game averages, the most common statstic considered when measuring a player's skill.
+        James Harden appears first with <mark>30.4 points</mark> followed by Anthony Davis and then Lebron with <mark>28.5 and 27.5 points respectively.</mark> The MVP - James Harden - obviously had the highest point average, so far, his title of MVP is holding up.
+        But this made me wonder, if there are any sub catagories that would effect a players performance in terms of points scored, <mark>So I analyzed Minutes Played and Field Goals Scored as "sub-catagories" in my conclusion.</mark>
+        </p>
+
+
+        <div id="MNandFG_Analysis">
+        <p id="MNandFG_Analysis2">
+        In terms of Minutes Played, this actually favors James Harden. <mark>While having the least amount of minutes played out of the top 5 highest point averages, he still came out on top with the highest in the leauge.</mark> Anthony Davis placed second to last
+        and still managed to place second in point averages. and Lebron with the highest amount of minutes played managed third. But I don't believe this is a significant measurement to credit Harden's performance to as although he placed dead last, the difference between
+        him and LeBron in minutes played is barely a minute and a half which is not a signifcant amount of time to score in.
+        </p>
+
+        <p id="MNandFG_Analysis3">
+        As for the Field Goals, this stastic measures how many buckets the player has actually scored not counting the fact a shot behind the three point line is worth an extra point compared to any other shot. This stastic, unlike minutes played
+        is actually a signifcant stat that favors Lebron James. Although not by a great difference, <mark>LeBron does score 1.4 more field goals on average compared to James Harden</mark> and 2 <mark>more than Damian Lillard</mark>  which came in second in Point Averages.
+        </p>
+
+        <p id="MNandFG_Analysis4">
+        There's one main conclusion we can draw from these 3 graphs after analyzing and comparing the players. So far, <mark>LeBron James and Anthony Davis</mark>, but more so LeBron, are James Harden's biggest competitors for the title of MVP.
+        Let's analyze our other two main points, block averages and assist averages to narrow it down further.
+        </p>
+
+        <div id="Blocks">
+        <img src="BlocksGraph.png" alt="Highest Block Averages Graph" height="auto" width="900px"/>
+        </div>
+
+        <div id="BlocksAnalysis">
+        LeBron and Harden are actually <b>not</b> in the top 5 highest block averages, which kind of comes by surprise because LeBron is partially known for his insanely athetlic blocks. In fact, they don't even appear in the top 10 So I
+        individually searched their stat through the dataset and added them to the graph.
+
+        <p id="BlocksAnalysis1">
+            Anthony Davis, one of our major competitors against Harden does come out with the highest in the whole leauge at <mark>2.6 blocks per game.</mark> He already <mark>beat Harden</mark> in Field Goals and <mark>LeBron in point averages</mark> while LeBron has beat <mark>both Harden and Davis</mark> in Minutes Played (which we aren't going ot majorly consider) and Field Goals.
+            The data so far is leaning towards LeBron James and Anthony Davis as being better contestants for the MVP title than James Harden was.
+        </p>
+
+        </div>
+
+        <div id="Assists">
+            <img src="AssistsGraph.png" alt="Highest Assist Averages Graph" height="auto" width="900px" />
+        </div>
+
+        <div id="AssistAnalysis">
+            <p id="AssistsAnalysis2">
+                One final look at one more stastic wraps this whole thing up for us. <mark>We had two competitors,</mark> LeBron and Davis, with this stastic. We only have one. As seen in the graph, LeBron and James Harden place second and third respectavely
+                while <mark>Anthony Davis did not even appear within the top 5</mark> for highest assist averages. With a simple glance at the graph we can see that <mark>LeBron James</mark> beat Harden by a small but still noticable amount, and they both beat Anthony Davis by a significant amount.
+            </p>
+        </div>
+        </div>
+
+
+        </div>
+
+
+
+        <div id="storypoint3">
+            <h1 id="titlestorypoint3">
+                So what does this all really mean?
+            </h1>
+            <p id="title2storypoint3">
+                [Is James Harden the MVP or not, if not who is?]
+            </p>
+
+            <p id="FinalAnalysis">
+                Here's how we'll finalize this. For each catagory, including sub catagories (including minutes played but by a small factor), We will analyze <mark>LeBron James, Anthony Davis, and James Harden</mark> and give them a score based on the order they appear in for each stastic.
+                <mark>First Place = 1 point, Second = 0.5 points, Third = 0.</mark> Although for minutes played, <mark>first place will get 0.5 points, second = .25 points, and third still at 0.</mark> I tallied up the scores and placed it in a pie chart on the right for visual reference. <strong>
+                    Hover your cursor over any of the
+                    pie pieces
+                </strong> to see the percentage of the whole "pie" it takes up along with the score that player recieved assigned by me based on their performance in the other catagories.
+            </p>
+        </div>
+
+        <div id="d3-container4"></div>
+
+        <div id="Conclusion">
+            <h1 id="ConclusionTitle">
+                So now here's what we've come to.
+            </h1>
+
+            <div id="ConclusionAnalysis">
+                <p id="conclusionwriting">
+                    As we can see through the pie chart, LeBron takes up 44% of the entire pie chart due to his score of 3 in our tallying done earlier. I feel that we can now come to a strong conclusion that although James Harden was crowned MVP, that title should've went to LeBron instead
+                    due to his higher perfromance Field Goals, Block Averages, and Assist Averages compared to Harden. So if LeBron is the true MVP, why was James Harden crowned that title?
+                </p>
+
+                <p id="conclusionwriting2">
+                    I would like to believe that the main reason James Harden was chosen over Lebron james was because one he was already crowned "Rookie of the year" which might've given the judge's some bias when voting for the MVP as well. But it can also be acredited to his on court performance outside of
+                    actual athetlic effectiveness. He had less in some catagories than LeBron but it's reasonable to assume he might've been a better player to watch, more entertaining for the fans so taking this into account, I'd like to say thats why James Harden was chosen as MVP. With this I believe the NBA should 
+                    look more into actual perfromance from players stastically and incorporate conclusions from that, like how I did with this project, into their final vote for the MVP as well as any other titles such as Rookie of the year.
+                    Regardless, according to the data, LeBron James should have been the Most Valuable Player of the 2017-2018 NBA season.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
+
